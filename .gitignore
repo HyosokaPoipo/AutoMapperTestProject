@@ -1,0 +1,10 @@
+*/obj/*
+*/bin/*
+*packages/*
+*.nupkg
+*.suo
+*.user
+*.orig
+ETalk.CRM.favdoc
+ETalk.CRM.marker.tss
+ETalk.CRM.tss
