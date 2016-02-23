@@ -8,13 +8,26 @@ using System.Threading.Tasks;
 
 namespace MapperTest
 {
+   
+    public class parentPoipo
+    {
+        public string parent;
+    }
+
+    public class parentHisoka
+    {
+        public string parent;
+    }
+
+    /************************************************************************************************************************/
+
     public class innerPoipo
     {
         public string taijutsu;
         public int rate;
     }
     
-    public class Poipo
+    public class Poipo : parentPoipo
     {
         public string Name { get; set; }
         public string Clan { get; set; }
@@ -31,7 +44,7 @@ namespace MapperTest
         public string taijutsu;
         public int rate;
     }
-    public class Hisoka
+    public class Hisoka : parentHisoka
     {
     public string Name {get; set;}
     public string Clan { get; set; }
