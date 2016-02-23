@@ -11,12 +11,12 @@ namespace MapperTest
    
     public class parentPoipo
     {
-        public string parent;
+        public string parent {get; set;}
     }
 
     public class parentHisoka
     {
-        public string parent;
+        public string parent { get; set; }
     }
 
     /************************************************************************************************************************/
@@ -106,6 +106,12 @@ namespace MapperTest
                 Console.WriteLine("Rate : " + temp.rate);
                 Console.WriteLine("Taijutsu : " + temp.taijutsu);                
             }
+
+
+
+            Console.WriteLine("=========Part IV=======");
+            Console.WriteLine("Parent Class Hisoka : " + mHisoka.parent);
+
 
             Console.ReadLine();
         }
