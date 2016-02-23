@@ -12,11 +12,13 @@ namespace MapperTest
     public class parentPoipo
     {
         public string parent {get; set;}
+        public string NamaPoipo { get; set; }
     }
 
     public class parentHisoka
     {
         public string parent { get; set; }
+        public string NamaHisoka { get; set; }
     }
 
     /************************************************************************************************************************/
@@ -75,7 +77,9 @@ namespace MapperTest
                 Jutsu = "Undefined",
                 something="something of Poipo",
                 poipoArray = myString,
-                iPoipo = initPoipo
+                iPoipo = initPoipo,
+                parent = "Ibu Kelas",
+                NamaPoipo = "Nama Parent Poipo"
             };
 
             Mapper.CreateMap<innerPoipo, innerHisoka>();//mapper array
@@ -84,6 +88,7 @@ namespace MapperTest
                 .ForMember(dest=>dest.justSomething, sour=>sour.MapFrom(poip=>poip.something))
                 .ForMember(dest=>dest.hisokaArray, sour=>sour.MapFrom(poip=>poip.poipoArray))
                 .ForMember(dest => dest.iHisoka, sour => sour.MapFrom(poip => poip.iPoipo))
+                .ForMember(dest => dest.NamaHisoka, sour => sour.MapFrom(poip => poip.NamaPoipo))
                 ;
             
 
@@ -111,7 +116,7 @@ namespace MapperTest
 
             Console.WriteLine("=========Part IV=======");
             Console.WriteLine("Parent Class Hisoka : " + mHisoka.parent);
-
+            Console.WriteLine("Nama Parent Hisoka : " + mHisoka.NamaHisoka);
 
             Console.ReadLine();
         }
